@@ -1,10 +1,12 @@
 import React from 'react'
 
-import { action } from "@storybook/addon-actions"
-import { storiesOf } from "@storybook/react";
-import CallToAction from '../components/form/cta-button'
+import {action} from "@storybook/addon-actions"
+import {storiesOf} from "@storybook/react";
+import CallToAction from '../components/form/cta-button';
+import {withInfo} from "@storybook/addon-info";
 
-storiesOf('Button', module )
-    .add('Enabled', ()=>(
-        <CallToAction label="Submit" onClick={action('button-click')} />
-))
+storiesOf('Building Blocks | Button', module)
+    .addDecorator(withInfo)
+    .add('Call to action ', () => (
+        <CallToAction label="Submit" onClick={action('button-click')}/>
+    ))
